@@ -1,0 +1,22 @@
+STEPS
+
+dotnet new sln -o Electrorating
+
+cd Electrorating
+
+dotnet new webapi -o Electrorating.Api
+dotnet new classlib -o Electrorating.Contracts
+dotnet new classlib -o Electrorating.Infrastructure
+dotnet new classlib -o Electrorating.Application
+dotnet new classlib -o Electrorating.Domain
+
+dotnet sln add (ls -r **\*.csproj)
+
+--para confirmar que se referenciaron bien los projectos y la compilacion fue exitosa
+dotnet build
+
+-- Agregar referencias
+dotnet add .\Electrorating.Api\ reference .\Electrorating.Contracts\ .\Electrorating.Application\
+dotnet add .\Electrorating.Infrastructure\ reference .\Electrorating.Application\
+dotnet add .\Electrorating.Application\ reference .\Electrorating.Domain\
+dotnet add .\Electrorating.Api\ reference .\Electrorating.Infrastructure\

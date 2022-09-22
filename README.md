@@ -1,2 +1,13 @@
-# csharp-ddd-example
-Example of REST API developed in C# and .NET 6 with Clean Architecture, DDD and Clean Code
+# CSharp DDD Example
+
+## Restore backup database
+
+
+## Run App
+### 
+
+## Build App
+### 
+
+## Deploy App
+### 
